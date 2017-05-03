@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/* BEGIN SVG */
+@import url("../img/svg/icons.data.png.css");
+@import url("../img/svg/icons.data.svg.css");
+@import url("../img/svg/icons.fallback.css");
+/* END SVG */
+
+
+@import "_colors-vars.scss";
+@import "_reset.scss";
+@import "_text-styles.scss";
+@import "_grid.scss";
+@import "_row.sass";
+@import "_item.scss";
+@import "_popup.scss";
+@import "_footer.scss";
+@import "_header.scss";
+@import "_slider.scss";
+@import "_btnToTop.sass";
+@import "_filters.scss";
+@import "_accordion.scss";
+@import "_nav-menu.scss";
+
+/* BEGIN comments */
+.comments {
+	&-icon-box {
+		display: table-cell;
+		vertical-align: middle;
+		.icon-eye {
+			width: 22px;
+		}
+		.icon-comment {
+			width: 17px;
+		}	
+	}
+	&__icon {
+		@extend .inl;
+		background-size: contain;
+		height: 20px;
+		margin-right: 3px;
+	}
+	&-link {
+		@extend .clearfix;
+		@include font($RR, 12, 12, 600);
+		color: $greyText2;
+		display: inline-block;
+		vertical-align: middle;
+		display: inline-flex;
+		align-items: center;
+		margin-right: 1rem;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+/* END comments */
+
+/* BEGIN soc icons */
+$socSize: 32px;
+.soc {
+	&-box {
+		text-align: center;
+		width: 100%;
+	}
+	&__icon {
+		@extend .inl;
+		width: $socSize;
+		height: $socSize;
+		background-size: contain;
+		margin-right: 25px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+/* END soc icons */
+
+
+ /* BEGIN icon-menu */
+ .nav-icon-menu {
+ 	width: 100%;
+ 	font-size: 0;
+ 	&__item {
+ 		display: inline-block;
+ 		width: 20%;
+ 		height: 50px;
+ 		background-color: darken($pink, 20%);
+ 		border: 1px solid $white;
+ 		cursor: pointer;
+		// margin-right: -1px;
+		// &:last-child {
+		// 	margin-right: 0;
+		// }
+		i {
+			display: inline-block;
+			vertical-align: middle;
+			width: 25px;
+			height: 19px;
+			background-size: contain;
+			background-position: 50%;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+
+		}
+	}
+}
+ /* END icon-menu */
+
+/* BEGIN pagination */
+.pagination {
+	&__link {
+		&.active {
+			font-weight: 600;
+		}
+		&::after {
+			content: '/';
+		}
+		&:last-child::after {
+			content: '';
+		}
+	}
+}
+/* END pagination */
+
+/* BEGIN brand-desc */
+.brand-desc {
+	&__title {
+		margin-bottom: 20px;
+	}
+	&__text {
+		margin-top: 10px;
+		line-height: 1.5;
+		text-align: justify;
+	}
+	&-box {
+		@extend .clearfix;
+	}
+	&-imgWrap {
+		margin-right: 25px;
+		img {
+			@extend .img--b;
+			width: 100%;
+			//min-width: 200px;
+		}
+	}
+}
+/* END brand-desc */
+
+/* BEGIN tabs */
+.tabs {
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 5px;
+		margin-right: 5px;
+		font-size: 0;
+	}
+	a {
+		display: block;
+		cursor: pointer;
+		user-select: none;
+		background-color: $greyLight10;
+		padding: 10px 0;
+		@include font($RM, 16, 16, 500);
+		text-transform: uppercase;
+		text-align: center;
+		width: 36px;
+		&.active {
+			background-color: $pink;
+			color: $white;
+		}
+	}
+}
+/* END tabs */

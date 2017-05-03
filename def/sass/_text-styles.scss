@@ -1,0 +1,336 @@
+@import "_colors-vars.scss";
+
+html, body {
+	font-family: $RR, sans-serif;
+	font-weight: normal;
+}
+
+/* BEGIN heading */
+.heading {
+	text-align: center;
+	line-height: 1;
+	&--1 {
+		@include font($RM, 26, 26, 500);
+		text-transform: uppercase;
+	}
+	&--2 {
+		@include font($RM, 17, 24, 500)
+	}
+	&--3 {
+		@include font($RM, 18, 24, 500);
+		color: $black;
+	}
+}
+/* END heading */
+
+/* BEGIN align */
+.pull {
+	&--right {
+		float: right;
+	}
+	&--left {
+		float: left;
+	}
+}
+.text--left {
+	text-align: left;
+}
+.text--right {
+	text-align: right;
+}
+/* END align */
+
+.decore-line {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	height: 1px;
+	background-color: $greyLight5;
+	border: none;
+}
+
+/* BEGIN links */
+.link {
+	&--country {
+		font-family: $RM;
+	}
+	&--inl, &__reg, &__logo {
+		@extend .inl;
+	}
+	&__reg {
+		width: 37px;
+		height: 47px;
+		background-size: cover;
+		background-position: 50%;
+	}
+	&__logo {
+		background-image: url(../img/svg/Logo_bdb.svg);
+		background-repeat: no-repeat;
+		background-position: 50%;
+		// width: 274px;
+		// height: 105px;
+		width: $logoW;
+		height: $logoH;
+		margin: 0px auto;
+	}
+	&--tdu {
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+		@media only screen and (max-width: 480px) {
+			margin-top: 0.5rem;
+		}
+	}
+	&__readMore {
+		text-decoration: underline;
+		cursor: pointer;
+		user-select: none;
+		@include font($RR, 14, 14);
+		color: $greyText5;
+		display: inline-block;
+		&:hover {
+			text-decoration: none;
+		}
+		&--bd {
+			border-top: 1px solid $greyLight5;
+			padding-top: 10px;
+			display: block;
+		}
+	}
+	&--pink {
+		.icon {
+			display: inline-block;
+			vertical-align: middle;
+			width: 15px;
+			height: 15px;
+			background-size: 15px;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			margin-right: 5px;
+		}
+		color: $pink;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&--offCite {
+		text-decoration: underline;
+		//@include font($RR, 28, 89);
+		@include font($RR, 14, 14);
+		color: $black;
+		&:active {
+			color: $greyText6;
+			text-decoration: none;
+		}
+	}
+}
+
+$toggleMenuSize: 30px;
+.toggleMenu {
+		display: inline-block;
+		position: relative;
+		width: $toggleMenuSize;
+		height: $toggleMenuSize;
+		cursor: pointer;
+		user-select: none;
+		&__icon {
+			display: block;
+			position: absolute;
+			background-color: $black;
+			width: $toggleMenuSize;
+			height: 2px;
+			top: 50%;
+			right: 0px;
+			margin-top: 1px;
+			opacity: 1; 
+			&::before, &::after {
+				position: absolute;
+				background-color: $black;
+				width: $toggleMenuSize;
+				content: " ";
+				display: block;
+				height: 2px;
+			}
+			&::after {
+				bottom: 8px;
+			}
+			&::before {
+				top: 8px;
+			}
+		}
+		&:hover {
+			.toggleMenu__icon, .toggleMenu__icon::before, .toggleMenu__icon::after {
+				background-color: $greyText2;
+			} 
+		}
+		&--active {
+			.toggleMenu__icon {
+				background-color: transparent;
+			}
+			.toggleMenu__icon::before {
+				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				top: 0px;
+				background-color: $pink;
+				width: $toggleMenuSize - 10px;
+			}
+			.toggleMenu__icon::after {
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				bottom: 0px;
+				background-color: $pink;
+				width: $toggleMenuSize - 10px;
+			}
+			&:hover {
+				.toggleMenu__icon {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+/* END links */
+
+
+
+/* BEGIN item-label */
+.item {
+	&__label {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		text-transform: uppercase;
+		user-select: none;
+		cursor: pointer;
+		color: $white;
+		@include font($RM, 14, 14);
+		white-space: nowrap;
+		min-width: 100px;
+		//height: 52px;
+		border-radius: 4px;
+		transition: background-color 300ms ease-in;
+		background-color: $black;
+		padding: 10px 8px;
+		&--new {
+			background-color: $labelNew;
+			&:hover {
+				background-color: $labelNewH;
+			}
+		}
+		&--collections {
+			background-color: $labelCollections;
+			&:hover {
+				background-color: $labelCollectionsH;
+			}
+		}
+		&--lifehack {
+			background-color: $labelLifehack;
+			&:hover {
+				background-color: $labelLifehackH;
+			}
+		}
+		&--sale {
+			background-color: $labelSale;
+			&:hover {
+				background-color: $labelSaleH;
+			}
+		}
+	}
+}
+/* END item-label */
+
+/* BEGIN icons */
+.icon {
+	&__country {
+		display: inline-block;
+		vertical-align: middle;
+		width: auto;
+		background-size: cover;
+		user-select: none;
+		cursor: pointer;
+		margin-right: 10px;
+	}
+}
+/* END icons */
+
+/* BEGIN btn */
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	white-space: nowrap;
+	&--grey {
+		background-color: $greyLight7;
+		border: 1px solid $greyLight8;
+		border-radius: 1px;
+		padding: 10px 15px;
+		//@include font($RM, 28, 28);
+		@include font($RM, 14, 14, 400);
+		color: $black;
+		letter-spacing: 0.02rem;
+		&:active, &:hover {
+			background-color: $greyLight5;
+		}
+	}
+	&--toTop {
+		display: block;
+		margin: 5px auto 30px;
+		width: 54px;
+		height: 54px;
+		border-radius: 50%;
+		transform: rotate(180deg);
+		background-color: $greyLight;
+		background-size: 20px;
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22512px%22%20height%3D%22512px%22%20viewBox%3D%220%200%20451.847%20451.847%22%20style%3D%22enable-background%3Anew%200%200%20451.847%20451.847%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%3E%0A%09%3Cpath%20d%3D%22M225.923%2C354.706c-8.098%2C0-16.195-3.092-22.369-9.263L9.27%2C151.157c-12.359-12.359-12.359-32.397%2C0-44.751%20%20%20c12.354-12.354%2C32.388-12.354%2C44.748%2C0l171.905%2C171.915l171.906-171.909c12.359-12.354%2C32.391-12.354%2C44.744%2C0%20%20%20c12.365%2C12.354%2C12.365%2C32.392%2C0%2C44.751L248.292%2C345.449C242.115%2C351.621%2C234.018%2C354.706%2C225.923%2C354.706z%22%20fill%3D%22%237b7b7d%22/%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3C/svg%3E%0A');
+	}
+}
+/* END btn */
+
+
+/* BEGIN fields */
+.field {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	&__search {
+		width: 100%;
+		padding: 7px 10px;
+		border: 1px solid $greyLight11;
+		color: $greyText7;
+		background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2021.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20version%3D%221.0%22%20id%3D%22%u0421%u043B%u043E%u0439_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20129%20129%22%20style%3D%22enable-background%3Anew%200%200%20129%20129%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text/css%22%3E%0A%09.st0%7Bfill%3A%23AEAEAD%3B%7D%0A%3C/style%3E%0A%3Cg%3E%0A%09%3Cpath%20class%3D%22st0%22%20d%3D%22M51.6%2C96.7c11%2C0%2C21-3.9%2C28.8-10.5l35%2C35c0.8%2C0.8%2C1.8%2C1.2%2C2.9%2C1.2s2.1-0.4%2C2.9-1.2c1.6-1.6%2C1.6-4.2%2C0-5.8%0A%09%09l-35-35c6.5-7.8%2C10.5-17.9%2C10.5-28.8c0-24.9-20.2-45.1-45.1-45.1C26.8%2C6.5%2C6.5%2C26.8%2C6.5%2C51.6C6.5%2C76.5%2C26.8%2C96.7%2C51.6%2C96.7z%0A%09%09%20M51.6%2C14.7c20.4%2C0%2C36.9%2C16.6%2C36.9%2C36.9C88.5%2C72%2C72%2C88.5%2C51.6%2C88.5S14.7%2C71.9%2C14.7%2C51.6C14.7%2C31.3%2C31.3%2C14.7%2C51.6%2C14.7z%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A');
+		background-repeat: no-repeat;
+		background-size: 20px;
+		background-position: calc(100% - 5px) 50%;
+		&:focus {
+			background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjEyLjk4MiAyMTIuOTgyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMTIuOTgyIDIxMi45ODI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJDbG9zZSI+DQoJPHBhdGggc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkOyIgZD0iTTEzMS44MDQsMTA2LjQ5MWw3NS45MzYtNzUuOTM2YzYuOTktNi45OSw2Ljk5LTE4LjMyMywwLTI1LjMxMiAgIGMtNi45OS02Ljk5LTE4LjMyMi02Ljk5LTI1LjMxMiwwbC03NS45MzcsNzUuOTM3TDMwLjU1NCw1LjI0MmMtNi45OS02Ljk5LTE4LjMyMi02Ljk5LTI1LjMxMiwwYy02Ljk4OSw2Ljk5LTYuOTg5LDE4LjMyMywwLDI1LjMxMiAgIGw3NS45MzcsNzUuOTM2TDUuMjQyLDE4Mi40MjdjLTYuOTg5LDYuOTktNi45ODksMTguMzIzLDAsMjUuMzEyYzYuOTksNi45OSwxOC4zMjIsNi45OSwyNS4zMTIsMGw3NS45MzctNzUuOTM3bDc1LjkzNyw3NS45MzcgICBjNi45ODksNi45OSwxOC4zMjIsNi45OSwyNS4zMTIsMGM2Ljk5LTYuOTksNi45OS0xOC4zMjIsMC0yNS4zMTJMMTMxLjgwNCwxMDYuNDkxeiIgZmlsbD0iI0FFQUVBRCIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+");
+			background-size: 10px;
+			background-position-x: calc(100% - 10px);
+		}
+		&--pink {
+			border-color: $pink;
+			background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2021.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20version%3D%221.0%22%20id%3D%22%u0421%u043B%u043E%u0439_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20129%20129%22%20style%3D%22enable-background%3Anew%200%200%20129%20129%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text/css%22%3E%0A%09.st0%7Bfill%3A%23FBABD6%3B%7D%0A%3C/style%3E%0A%3Cg%3E%0A%09%3Cpath%20class%3D%22st0%22%20d%3D%22M51.6%2C96.7c11%2C0%2C21-3.9%2C28.8-10.5l35%2C35c0.8%2C0.8%2C1.8%2C1.2%2C2.9%2C1.2s2.1-0.4%2C2.9-1.2c1.6-1.6%2C1.6-4.2%2C0-5.8%0A%09%09l-35-35c6.5-7.8%2C10.5-17.9%2C10.5-28.8c0-24.9-20.2-45.1-45.1-45.1C26.8%2C6.5%2C6.5%2C26.8%2C6.5%2C51.6C6.5%2C76.5%2C26.8%2C96.7%2C51.6%2C96.7z%0A%09%09%20M51.6%2C14.7c20.4%2C0%2C36.9%2C16.6%2C36.9%2C36.9C88.5%2C72%2C72%2C88.5%2C51.6%2C88.5S14.7%2C71.9%2C14.7%2C51.6C14.7%2C31.3%2C31.3%2C14.7%2C51.6%2C14.7z%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A');
+			&::-webkit-input-placeholder { color: $pink; }
+			&::-moz-placeholder { color: $pink; opacity: 1; }
+			&:-ms-input-placeholder { color: $pink; }
+			&:-moz-placeholder { color: $pink; }
+			&:focus {
+				background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2018.1.1%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20212.982%20212.982%22%20style%3D%22enable-background%3Anew%200%200%20212.982%20212.982%3B%22%20xml%3Aspace%3D%22preserve%22%20width%3D%22512px%22%20height%3D%22512px%22%3E%0A%3Cg%20id%3D%22Close%22%3E%0A%09%3Cpath%20style%3D%22fill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3B%22%20d%3D%22M131.804%2C106.491l75.936-75.936c6.99-6.99%2C6.99-18.323%2C0-25.312%20%20%20c-6.99-6.99-18.322-6.99-25.312%2C0l-75.937%2C75.937L30.554%2C5.242c-6.99-6.99-18.322-6.99-25.312%2C0c-6.989%2C6.99-6.989%2C18.323%2C0%2C25.312%20%20%20l75.937%2C75.936L5.242%2C182.427c-6.989%2C6.99-6.989%2C18.323%2C0%2C25.312c6.99%2C6.99%2C18.322%2C6.99%2C25.312%2C0l75.937-75.937l75.937%2C75.937%20%20%20c6.989%2C6.99%2C18.322%2C6.99%2C25.312%2C0c6.99-6.99%2C6.99-18.322%2C0-25.312L131.804%2C106.491z%22%20fill%3D%22%23fc49a9%22/%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3C/svg%3E%0A');
+				background-position-x: calc(100% - 10px);
+			}
+		}
+	}
+}
+/* END fields */
+
+/* BEGIN link readMore */
+.more-content {
+	display: none;
+	&--visible {
+		display: block;
+	}
+}
+/* END limk readMore */

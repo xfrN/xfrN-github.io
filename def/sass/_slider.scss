@@ -1,0 +1,38 @@
+/* BEGIN slider */
+.slide {
+	&__img {
+		@extend .img--b;
+	}
+	&-img-wrap {
+		@extend .img-wrap;
+	}
+	
+}
+.owl-dots {
+	text-align: center;
+	-webkit-tap-highlight-color: transparent;
+	display: inline-block;
+	zoom: 1;
+	width: 100%;
+	margin-top: 5px;
+}
+.owl-dot {
+	display: inline-block;
+	&.active, &:hover {
+		span {
+			background: $pink;
+		}
+	}
+	
+	span {
+		width: 10px;
+		height: 10px;
+		margin: 0px 10px;
+		background: $greyLight3;
+		display: block;
+		-webkit-backface-visibility: visible;
+		transition: opacity .2s ease;
+		border-radius: 30px;
+	}
+}
+/* END slider */

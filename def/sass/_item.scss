@@ -1,0 +1,118 @@
+/* BEGIN item */
+$gap: 30px;
+.item {
+	@extend .clearfix;
+	margin-bottom: 25px;
+	&__heading {
+		margin-top: 10px;
+		text-transform: uppercase;
+		height: 1.5rem;
+		overflow: hidden;
+		//@include font($RR, 32, 44);
+		@include font($RM, 16, 16, 500);
+	}
+	&__title {
+		height: 25px;
+		overflow: hidden;
+		@include font($RR, 14, 21, 300);
+	}
+	&-img-wrap {
+		@extend .clearfix;
+		@extend .img-wrap;
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		&--fx {
+			border: 2px solid $greyLight9;
+			padding: 15px;
+			height: 325px;
+			overflow: hidden;
+		}
+	}
+	&__img {
+		@extend .img;
+		@extend .img--w;
+	}
+	&__img--w {
+		@extend .img;
+		@extend .img--b;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&-actions {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+		display: table;
+		vertical-align: middle;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&-desc {
+		&--fx {
+			height: 80px;
+			overflow: hidden;
+		}
+	}
+}
+/* END item */
+
+/* BEGIN if supported flexbox */
+.item {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: space-between;
+	flex: 1 0 300px;
+	margin-bottom: 25px;
+	&__heading {
+		margin-top: 10px;
+		text-transform: uppercase;
+		@include font($RM, 16, 16, 500);
+	}
+	&__title {
+		@include font($RR, 14, 21, 300);
+	}
+	&-img-wrap {
+		width: 100%;
+		text-align: center;
+		&--fx {
+			border: 2px solid $greyLight9;
+			padding: 15px;
+			height: 325px;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	&__img {
+		height: 300px;
+		width: 100%;
+		overflow: hidden;
+		object-fit: cover;
+	}
+	&__img--w {
+		max-width: 100%;
+		width: auto;
+		height: auto;
+		transform: none;
+		top: auto;
+	}
+	&-desc {
+		width: 100%;
+		&--fx {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+	&-actions {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+/* END if supported flexbox */

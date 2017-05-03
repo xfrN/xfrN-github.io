@@ -1,0 +1,135 @@
+@import url("../img/svg/icons.data.png.css");
+
+@import url("../img/svg/icons.data.svg.css");
+@import url("../fonts/fonts.css");
+
+/* Colors */
+$white: #fff;
+$black: #000;
+$pink: #fc49a9;
+$pink1: #f96cb8;
+$pink2: #de45bb;
+$pink3: #fde6f2;
+$pink4: #cc3892;
+
+$greyLight: #dcdcdc;
+$greyLight2: #949494;
+$greyLight3: #dcdcdc;
+$greyLight4: #f0efef;
+$greyLight5: #e8e8e8; 
+$greyLight6: #f8f7f8;
+$greyLight7: #f3f3f3;
+$greyLight8: #dcdcdc;
+$greyLight9: #f4f4f4;
+$greyLight10: #e8e8e7;
+$greyLight11: #c4c4c4;
+$greyLight12: #e9e9e8;
+
+$greyDark: #acacac;
+$greyText1: #858585;
+$greyText2: #b3b3b3;
+$greyText3: #787878;
+$greyText4: #777;
+$greyText5: #a09f9f;
+$greyText6: #666666;
+$greyText7: #959593;
+$greyText8: #636363;
+
+$labelNew: #baa184;
+$labelNewH: #d4c5b3;
+$labelCollections: #856748;
+$labelCollectionsH: #b3a18e;
+$labelLifehack: #a79f97;
+$labelLifehackH: #d6d5d5;
+$labelSale: #873b3c;
+$labelSaleH: lighten(#873b3c, 15%);
+
+@mixin font($font-family, $font-size, $line-height: 1, $font-weight: normal) {
+	//font-family: $font-family, -apple-system, BlinkMacSystemFont, "Roboto", "Roboto Condensed", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-family: $font-family;
+	font-size: $font-size/16 + rem;
+	line-height: $line-height/$font-size;
+	font-weight: $font-weight;
+}
+
+$headerHeight: 120px;
+$logoW: 200px;
+$logoH: 75px;
+
+.inl {
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+}
+
+.img {
+	margin: 0 auto;
+	display: block;
+	&--b {
+		max-width: 100%;
+		height: auto;
+	}
+	&--w {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		margin: 0 auto;
+	}
+	
+	
+}
+.img-wrap {
+	position: relative;
+	&::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba($black, 0.1);
+		z-index: 1;
+		opacity: 0;
+	}
+	// &:hover::after {
+	// 	opacity: 1;
+	// }
+}
+
+/* Fonts */
+// $RM:  "RobotoMedium";
+// $RI: "RobotoItalic";
+// $RL: "RobotoLight";
+// $RB: "RobotoBold";
+// $RBsb: "RobotoSlabBold";
+// $RBsr: "RobotoSlabRegular";
+// $RBk: "RobotoBlack";
+// $RR: "RobotoRegular";
+
+$OS: "museo_sans_cyrl300";
+$RR: "museo_sans_cyrl300";
+$RL: "museo_sans_cyrl100";
+$RM:  "museo_sans_cyrl500";
+$RI: "museo_sans_cyrl300";
+$RB: "museo_sans_cyrl500";
+$RBsb: "museo_sans_cyrl500";
+$RBsr: "museo_sans_cyrl500";
+$RBk: "museo_sans_cyrl700";
+
+
+.flex-container {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}

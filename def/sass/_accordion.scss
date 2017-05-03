@@ -1,0 +1,36 @@
+.acc {
+	&__heading {
+		background-color: $pink3;
+		padding: 15px;
+		//@include font($RM, 50, 53.37);
+		@include font($RB, 16, 16);
+		cursor: pointer;
+		user-select: none;
+		border-bottom: 1px solid $white;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	&__link {
+		display: block;
+		padding: 15px;
+		padding-left: 30px;
+		cursor: pointer;
+		color: $greyText8;
+		border: 1px solid  $greyLight12;
+		border-width: 1px 0;
+		margin-bottom: -1px;
+		@include font($RB, 14, 14);
+		&:hover {
+			color: $pink;
+		}
+	}
+	&-content {
+		display: none;
+		&.open {
+			display: block;
+			//background-color: $greyLight12;
+		}
+	}
+}
+

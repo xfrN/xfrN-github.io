@@ -1,0 +1,160 @@
+/* BEGIN filters */
+.filter {
+	z-index: 1;
+	&-wrap {
+		padding-left: 0;
+		padding-right: 0;
+		z-index: 99;
+		position: relative;
+	}
+	[type=checkbox]{
+		display: none;
+		&:checked ~ label {
+			background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2019.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%220%200%20491.858%20491.858%22%20style%3D%22enable-background%3Anew%200%200%20491.858%20491.858%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20d%3D%22M465.167%2C211.613H240.21H26.69c-8.424%2C0-26.69%2C11.439-26.69%2C34.316s18.267%2C34.316%2C26.69%2C34.316h213.52h224.959%0D%0A%09%09%09c8.421%2C0%2C26.689-11.439%2C26.689-34.316S473.59%2C211.613%2C465.167%2C211.613z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A');
+			& ~ .filter-content {
+				height: auto;
+			}
+		}
+	}
+	&-sub {
+		background-color: $white;
+		position: relative;
+		[type=checkbox]:checked ~ label {
+			background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22512px%22%20height%3D%22512px%22%20viewBox%3D%220%200%20451.847%20451.847%22%20style%3D%22enable-background%3Anew%200%200%20451.847%20451.847%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%3E%0A%09%3Cpath%20d%3D%22M225.923%2C354.706c-8.098%2C0-16.195-3.092-22.369-9.263L9.27%2C151.157c-12.359-12.359-12.359-32.397%2C0-44.751%20%20%20c12.354-12.354%2C32.388-12.354%2C44.748%2C0l171.905%2C171.915l171.906-171.909c12.359-12.354%2C32.391-12.354%2C44.744%2C0%20%20%20c12.365%2C12.354%2C12.365%2C32.392%2C0%2C44.751L248.292%2C345.449C242.115%2C351.621%2C234.018%2C354.706%2C225.923%2C354.706z%22%20fill%3D%22%237b7b7d%22/%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3C/svg%3E%0A');
+		}
+		&--more {
+			margin-top: -1px;
+			display: none;
+		}
+		&--visible {
+			display: block;
+		}
+		& & {
+			height: 140px;
+			overflow: hidden;
+			overflow-y: scroll;
+			&::-webkit-scrollbar {
+				width: 5px;
+				height: 5px;
+			} 
+			&::-webkit-scrollbar-track {
+				background-color: lighten($greyLight, 5%);
+
+			}
+			&::-webkit-scrollbar-thumb {
+				background-color: darken($greyLight, 5%);
+			}
+		}
+		& li {
+			border: 1px solid $greyLight5;
+			border-width: 1px 0;
+			margin-bottom: -1px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		& li li {
+			border-left: 1px solid $greyLight5;
+			margin-left: 1px;
+		}
+	}
+	&-content {
+		height: 0;
+		overflow: hidden;
+	}
+	&-item {
+		&--btn {
+			border: 1px solid $greyLight5;
+			background-color: $white;
+			.filter-content {
+				height: auto;
+				padding: 15px;
+			}
+		}
+		label {
+			user-select: none;
+			display: block;
+			padding: 15px 15px;
+			cursor: pointer;
+			@include font($RM, 16, 16, 300);
+			background-color: $greyLight6;
+			background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2021.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20version%3D%221.0%22%20id%3D%22%u0421%u043B%u043E%u0439_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2024%2024%22%20style%3D%22enable-background%3Anew%200%200%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text/css%22%3E%0A%09.st0%7Bfill%3A%23777777%3B%7D%0A%3C/style%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M23%2C10h-8.5C14.2%2C10%2C14%2C9.8%2C14%2C9.5V1c0-0.6-0.4-1-1-1h-2c-0.6%2C0-1%2C0.4-1%2C1v8.5C10%2C9.8%2C9.8%2C10%2C9.5%2C10H1%0A%09c-0.6%2C0-1%2C0.4-1%2C1v2c0%2C0.6%2C0.4%2C1%2C1%2C1h8.5c0.3%2C0%2C0.5%2C0.2%2C0.5%2C0.5V23c0%2C0.6%2C0.4%2C1%2C1%2C1h2c0.6%2C0%2C1-0.4%2C1-1v-8.5c0-0.3%2C0.2-0.5%2C0.5-0.5%0A%09H23c0.6%2C0%2C1-0.4%2C1-1v-2C24%2C10.4%2C23.6%2C10%2C23%2C10z%22/%3E%0A%3C/svg%3E%0A');
+			background-repeat: no-repeat;
+			background-size: 12px;
+			background-position: calc(100% - 15px) 50%;
+			border: 1px solid $white;
+			border-bottom: -1px;
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+		& {
+			label {
+				background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.0//EN%22%20%22http%3A//www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd%22%20%5B%0D%0A%09%3C%21ENTITY%20ns_flows%20%22http%3A//ns.adobe.com/Flows/1.0/%22%3E%0D%0A%5D%3E%0A%3Csvg%20version%3D%221%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22128%22%20height%3D%22128%22%20viewBox%3D%22-24.8%20-0.8%20128%20128%22%3E%0A%20%20%3Cpath%20fill%3D%22%237B7B7D%22%20d%3D%22M76%2069.6L16.8%20124c-4%203.2-9.6%203.2-13.6%200s-4-8.8-.8-12.8l52.8-48-52.8-48c-3.2-4-3.2-9.6%200-12.8%204-3.2%2010.4-3.2%2014.4%200L76%2056.8c1.6%201.6%202.4%204%202.4%206.4%200%202.4-.8%204.8-2.4%206.4z%22/%3E%0A%3C/svg%3E%0A');
+				color: $greyText4;
+				padding-left: 35px;
+			}
+		}
+	}
+	
+	&__link {
+		display: block;
+		background-color: $white;
+		color: $black;
+		padding: 15px 25px;
+		padding-left: 50px;
+		@include font($RM, 16, 16, 300);
+		&:hover {
+			color: $pink;
+			background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2018.1.1%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2029.107%2029.107%22%20style%3D%22enable-background%3Anew%200%200%2029.107%2029.107%3B%22%20xml%3Aspace%3D%22preserve%22%20width%3D%22512px%22%20height%3D%22512px%22%3E%0A%3Cg%3E%0A%09%3Cg%20id%3D%22c147_full_moon%22%3E%0A%09%09%3Cg%3E%0A%09%09%09%3Cpath%20d%3D%22M14.554%2C0C6.561%2C0%2C0%2C6.562%2C0%2C14.552c0%2C7.996%2C6.561%2C14.555%2C14.554%2C14.555c7.996%2C0%2C14.553-6.559%2C14.553-14.555%20%20%20%20%20C29.106%2C6.562%2C22.55%2C0%2C14.554%2C0z%22%20fill%3D%22%23fc49a9%22/%3E%0A%09%09%3C/g%3E%0A%09%3C/g%3E%0A%09%3Cg%20id%3D%22Capa_1_14_%22%3E%0A%09%3C/g%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3Cg%3E%0A%3C/g%3E%0A%3C/svg%3E%0A');
+			background-size: 8px;
+			background-repeat: no-repeat;
+			background-position: calc(100% - 15px) 50%;
+		}
+		&--search {
+			padding-left: 25px;
+			&:hover {
+				background: $white;
+			}
+		}
+		&--showMore {
+			font-style: italic;
+			text-decoration: underline;
+			color: $greyText2;
+			padding-left: 35px;
+			&:hover {
+				background-image: none;
+			}
+		}
+	}
+
+}
+
+.filter__toggle {
+	user-select: none;
+	display: block;
+	padding: 15px 15px;
+	cursor: pointer;
+	@include font($RM, 16, 16, 300);
+	background-color: $greyLight6;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2021.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20version%3D%221.0%22%20id%3D%22%u0421%u043B%u043E%u0439_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2024%2024%22%20style%3D%22enable-background%3Anew%200%200%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text/css%22%3E%0A%09.st0%7Bfill%3A%23777777%3B%7D%0A%3C/style%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M23%2C10h-8.5C14.2%2C10%2C14%2C9.8%2C14%2C9.5V1c0-0.6-0.4-1-1-1h-2c-0.6%2C0-1%2C0.4-1%2C1v8.5C10%2C9.8%2C9.8%2C10%2C9.5%2C10H1%0A%09c-0.6%2C0-1%2C0.4-1%2C1v2c0%2C0.6%2C0.4%2C1%2C1%2C1h8.5c0.3%2C0%2C0.5%2C0.2%2C0.5%2C0.5V23c0%2C0.6%2C0.4%2C1%2C1%2C1h2c0.6%2C0%2C1-0.4%2C1-1v-8.5c0-0.3%2C0.2-0.5%2C0.5-0.5%0A%09H23c0.6%2C0%2C1-0.4%2C1-1v-2C24%2C10.4%2C23.6%2C10%2C23%2C10z%22/%3E%0A%3C/svg%3E%0A');
+	background-repeat: no-repeat;
+	background-size: 12px;
+	background-position: calc(100% - 15px) 50%;
+	border: 1px solid $white;
+	border-bottom: -1px;
+
+	&--active {
+		background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2019.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%220%200%20491.858%20491.858%22%20style%3D%22enable-background%3Anew%200%200%20491.858%20491.858%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20d%3D%22M465.167%2C211.613H240.21H26.69c-8.424%2C0-26.69%2C11.439-26.69%2C34.316s18.267%2C34.316%2C26.69%2C34.316h213.52h224.959%0D%0A%09%09%09c8.421%2C0%2C26.689-11.439%2C26.689-34.316S473.59%2C211.613%2C465.167%2C211.613z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%3C/g%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3Cg%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A');
+	}
+}
+
+.filter {
+	display: none;
+	&--open {
+		display: block;
+		background-color: rgba($black, 0.5);
+
+	}
+}
+/* END filters */

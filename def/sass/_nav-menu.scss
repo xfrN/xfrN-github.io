@@ -1,0 +1,53 @@
+/* BEGIN nav-menu */
+.menu {
+	padding: 0;
+	&-popup {
+		@extend .popup;
+	}
+	&--show {
+		display: block;
+	}
+	&--close {
+		display: none;
+	}
+	&-wrap {
+		background-color: $white;
+		padding: 0;
+	}
+	
+	&-footer {
+		background-color: $greyLight;
+		padding: 15px;
+		&--top {
+			border-top: 1px solid darken($greyLight5, 20%);
+		}
+		&--btm {
+			@extend .footer-bottom;
+			background-color: $greyDark;
+		}
+	}
+	&-item {
+		display: block;
+		width: 100%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		text-align: left;
+		text-transform: uppercase;
+		@include font($RM, 16, 16, 400);
+		border-bottom: 1px solid $greyLight5;
+		&:first-child {
+			border-top: 1px solid $greyLight5;
+		}
+		&:last-child {
+			border-bottom: none;
+		}
+		&:hover {
+			color: $pink;
+		}
+	}
+	&__link {
+		display: block;
+		
+	}
+}
+/* END nav-menu */

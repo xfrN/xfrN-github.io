@@ -1,0 +1,41 @@
+/* BEGIN header */
+.header {
+	text-align: center;
+	z-index: 10;
+	@media only screen and(min-width: 480px){
+		padding: 15px 0;
+	}
+	&-top {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	
+	&--fixed {
+		position: fixed;
+		width: 100%;
+		background-color: $white;
+		z-index: 100;
+		top: 0;
+		&-padding {
+			padding-top: 55px;
+		}
+	}
+	&__link {
+		text-transform: uppercase;
+		color: $white;
+		@include font($OS, 10, 20, 300);
+		display: block;
+		cursor: pointer;
+		padding: 5px 8px;
+		float: left;
+		white-space: nowrap;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+			float: right;
+		}
+	}
+}
+/* END header */
